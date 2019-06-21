@@ -33,7 +33,7 @@ FileUtils.mkdir_p build_dir
 FileUtils.mkdir_p install_dir
 Dir.chdir build_dir do
   puts "Configuring OpenBabel"
-  cmake = "cmake #{src_dir} -DCMAKE_INSTALL_PREFIX=#{install_dir} -DBUILD_GUI=OFF -DENABLE_TESTS=OFF -DRUN_SWIG=ON -DRUBY_BINDINGS=ON"
+  cmake = "cmake #{src_dir} -DCMAKE_INSTALL_PREFIX=#{install_dir}  -DWITH_JSON=OFF -DBUILD_GUI=OFF -DENABLE_TESTS=OFF -DRUN_SWIG=ON -DRUBY_BINDINGS=ON"
   # set rpath for local installations
   # http://www.cmake.org/Wiki/CMake_RPATH_handling
   # http://vtk.1045678.n5.nabble.com/How-to-force-cmake-not-to-remove-install-rpath-td5721193.html
